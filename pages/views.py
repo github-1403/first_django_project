@@ -3,13 +3,22 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'pages/home.html')
+    context = {
+        'page_name': 'home'
+    }
+    return render(request, 'pages/home.html', context=context)
 
 
 def about(request):
-    return render(request, 'pages/about_us.html')
+    context = {
+        'page_name': 'about us'
+    }
+    return render(request, 'pages/about_us.html', context=context)
 
 
 def contact(request):
-    return render(request, 'pages/contact_us.html')
+    context = {
+        'page_name': 'contact us'
+    }
+    return render(request, 'pages/contact_us.html', context=context)
 
